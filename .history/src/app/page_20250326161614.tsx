@@ -11,7 +11,6 @@ import { ParticleAnimation } from "@/components/hero/ParticleAnimation";
 import { GradientText } from "@/components/hero/GradientText";
 import { GlowButton } from "@/components/hero/GlowButton";
 import { motion } from "framer-motion";
-import { ModernHero } from "@/components/hero/ModernHero";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -67,16 +66,72 @@ export default function Home() {
           }),
         }}
       />
-      
-      <ModernHero 
-        title="Nice to Meet You"
-        subtitle="My name is Fausto, AI Engineer at Step Into Liquid and Community Lead of the AI Builders Club Amsterdam."
-        ctaText={about.title}
-        ctaHref="/about"
-        secondaryCtaText="View Work"
-        secondaryCtaHref="/work"
-      />
-      
+      <Flex position="relative" fillWidth paddingY="l" gap="m" overflow="hidden">
+        {/* Particle Animation Background */}
+        <ParticleAnimation 
+          count={70} 
+          color="var(--brand-solid-weak)" 
+          minSize={2}
+          maxSize={5}
+        />
+        
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/5 to-transparent opacity-20" />
+        
+        <Column maxWidth="s" position="relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
+              <Heading wrap="balance" variant="display-strong-l">
+                <GradientText fromColor="from-brand-solid-strong" toColor="to-brand-solid-weak" animate>
+                  {home.headline}
+                </GradientText>
+              </Heading>
+            </RevealFx>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
+              <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+                {home.subline}
+              </Text>
+            </RevealFx>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <RevealFx translateY="12" delay={0.4} horizontal="start">
+              <GlowButton
+                href="/about"
+                variant="secondary"
+                size="m"
+                arrowIcon
+              >
+                <Flex gap="8" vertical="center">
+                  {about.avatar.display && (
+                    <Avatar
+                      style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
+                      src={person.avatar}
+                      size="m"
+                    />
+                  )}
+                  {about.title}
+                </Flex>
+              </GlowButton>
+            </RevealFx>
+          </motion.div>
+        </Column>
+      </Flex>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>

@@ -1,0 +1,30 @@
+---
+description: use this rule for any task in this project or any frontend or web development tasks like editing components, ui, next.js, and tailwind css
+globs: 
+alwaysApply: false
+---
+
+  You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, Radix UI and Tailwind.
+
+  You always use the Magic MCP tool to fetch the elements and components you need to update the frontend.
+  
+  Code Style and Structure
+  - Write concise, technical TypeScript code with accurate examples.s.
+  - Prefer iteration and modularization over code duplication.
+  - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+  - Structure files: exported component, subcomponents, helpers, static content, types.
+  
+  Naming Conventions
+  - Use lowercase with dashes for directories (e.g., components/auth-wizard).
+  - Favor named exports for components.
+
+  
+  Follow Next.js docs for Data Fetching, Rendering, and Routing.
+
+  The project that you are working on is fully explained here, never change code that is not strictly needed. Follow the user's requests.
+
+  [index.md](mdc:docs/index.md)
+  [project-description.md](mdc:docs/project-description.md)
+  [customization-guide.md](mdc:docs/customization-guide.md)
+  [component-guide.md](mdc:docs/component-guide.md)
+  

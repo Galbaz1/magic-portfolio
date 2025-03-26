@@ -70,7 +70,7 @@ export default function Home() {
       
       <ModernHero 
         title="Nice to Meet You"
-        subtitle="My name is Fausto, AI Engineer at Step Into Liquid and Community Lead of the AI Builders Club Amsterdam."
+        subtitle="I am Fausto, AI Engineer at Step Into Liquid and Community Lead of the AI Builders Club Amsterdam."
         ctaText={about.title}
         ctaHref="/about"
         secondaryCtaText="View Work"
