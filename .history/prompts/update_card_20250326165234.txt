@@ -1,0 +1,17 @@
+Thanks for sharing your project structure — based on the Magic Portfolio template and the way components are laid out (e.g. AnimatedContent, Projects, RevealFx, etc. in src/app/page.tsx), here’s the correctly scoped and adapted Cursor MCP prompt for your actual codebase:
+
+⸻
+
+✅ 21st.dev MCP Prompt for Magic Portfolio (Splite Card)
+
+“I’m using the Magic MCP (Model Context Protocol) in my Cursor agent workflow to manage components in my Magic Portfolio project. First, use the Magic MCP protocol to install the splite/default component from 21st.dev, located at the URL https://21st.dev/r/serafim/splite/default. This is a UI card component, and the Magic MCP should install it into the @/components/ui directory of my project, ensuring all necessary configurations and dependencies are handled automatically.
+
+After installation, update the src/app/page.tsx file, which contains the homepage layout built with Once UI’s Column, RevealFx, and AnimatedContent. Keep AnimatedContent in place as the hero section. Then, replace the first <Projects range={[1, 1]} /> block, currently wrapped inside <RevealFx>, with a new client component named CaseStudyCard.tsx. This component should be created in src/components/, and should use the newly installed SpliteCard (or whatever the exported component is named) to render a visual card below the hero section.
+
+Ensure the CaseStudyCard.tsx file has "use client" at the top. The card should contain the following custom content:
+	•	Title: Building Once UI, a Customizable Design System
+	•	Description: Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration.
+	•	CTA: Read case study →
+	•	Image: Replace the default image with a dark-themed browser mockup related to Once UI (or use an existing screenshot from the /public/images directory if available)
+
+In page.tsx, import and render CaseStudyCard directly below <AnimatedContent />, ensuring the layout and spacing is consistent with the existing Once UI structure (e.g., using gap="xl" or mt-12 if needed). Keep the rest of the page unchanged. Ensure the implementation remains compatible with my SCSS Modules, Tailwind utilities, and Once UI components. All required dependencies should be installed and managed via Magic MCP. Do not modify any unrelated logic.”

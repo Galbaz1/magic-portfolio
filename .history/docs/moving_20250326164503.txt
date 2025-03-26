@@ -1,0 +1,1 @@
+It's not really implemented; it was like an iPad frame around a scrolling image which is now gone. You can check this through the browser tool, print screen. I provided the code before, so have a look at what went wrong.
