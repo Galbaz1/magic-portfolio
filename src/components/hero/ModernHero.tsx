@@ -4,7 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Heading, Flex, Text, Column } from "@/once-ui/components";
 import { GradientText } from "./GradientText";
-import { GlowButton } from "./GlowButton";
+import { AuroraButton } from "@/components/ui/aurora-button";
+import { TextureButton } from "@/components/ui/texture-button";
 import Link from "next/link";
 
 interface ModernHeroProps {
@@ -115,25 +116,24 @@ export const ModernHero: React.FC<ModernHeroProps> = ({
           className="flex flex-wrap items-center justify-center gap-4"
         >
           {/* Primary CTA */}
-          <GlowButton
+          <AuroraButton
             href={ctaHref}
-            variant="primary"
-            size="l"
             arrowIcon
+            glowClassName="from-indigo-400 via-purple-500 to-blue-500"
           >
             {ctaText}
-          </GlowButton>
+          </AuroraButton>
           
           {/* Secondary CTA (if provided) */}
           {secondaryCtaText && secondaryCtaHref && (
-            <GlowButton
+            <TextureButton
               href={secondaryCtaHref}
               variant="secondary"
-              size="l"
-              arrowIcon={false}
+              size="lg"
+              arrowIcon
             >
               {secondaryCtaText}
-            </GlowButton>
+            </TextureButton>
           )}
         </motion.div>
         

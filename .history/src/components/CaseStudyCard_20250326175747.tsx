@@ -12,6 +12,19 @@ export function CaseStudyCard() {
       <div className="flex flex-col md:flex-row h-full">
         {/* Left content */}
         <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+            S
+          </h1>
+          <p className="mt-4 text-neutral-300 max-w-lg">
+            
+          </p>
+          <Link 
+            href="/work/once-ui" 
+            className="mt-6 inline-flex items-center text-white/80 hover:text-white transition-colors"
+          >
+            <span>Read case study</span>
+            <Arrow className="ml-2 w-4 h-4" />
+          </Link>
         </div>
 
         {/* Right content - 3D scene or image */}
