@@ -13,6 +13,7 @@ import { GlowButton } from "@/components/hero/GlowButton";
 import { motion } from "framer-motion";
 import { ModernHero } from "@/components/hero/ModernHero";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
+import { VercelV0Chat } from "@/components/ui/v0-ai-chat";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -69,10 +70,9 @@ export default function Home() {
         }}
       />
       
-      <ModernHero 
-        title="Nice to Meet You"
-        subtitle="I am Fausto, AI Engineer at Step Into Liquid and Community Lead of the AI Builders Club Amsterdam."
-      />
+      <div className="w-full max-w-4xl mx-auto px-4">
+        <VercelV0Chat />
+      </div>
       
       <CaseStudyCard />
       
